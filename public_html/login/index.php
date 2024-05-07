@@ -2,7 +2,7 @@
 
 use App\Core;
 
-require_once dirname(__DIR__, 1) . "/autoload.php";
+require_once dirname(__DIR__, 2) . "/autoload.php";
 
 $App = new Core("Login");
 $App->renderHtml([Core::HTML_OPEN, Core::HTML_HEADER]);
@@ -10,51 +10,6 @@ $App->renderHtml([Core::HTML_OPEN, Core::HTML_HEADER]);
 ?>
 
 <main id="main-content" class="">
-    <section class="p-strip is-deep">
-        <div class="row--50-50">
-            <div class="col">
-                <h1>
-                    How to build<br class="u-hide--small"> a brochure site
-                </h1>
-            </div>
-            <div class="col">
-                <p class="p-heading--3">
-                    This page showcases and documents the use of Vanilla framework to build a brochure site.
-                </p>
-                <p>All the sections of the page should be implemented using one of the grid layouts demonstrated below. By default all content should be inside the containers that use 25% of the full width (3 columns out of 12 column grid on large screens) or multiplication of it.</p>
-                <p>The grid layout should also be responsive, making sure that relative size is preserved on medium screen as much as possible (for details check the individual documentation of each split). On small screens all columns should take whole width of the page and appear in sequence (as by default Vanilla behaviour).</p>
-            </div>
-        </div>
-    </section>
-    <section class="p-section">
-        <div class="row">
-            <hr class="p-rule">
-        </div>
-        <div class="row--25-75-on-large">
-            <div class="col">
-                <h3 class="p-muted-heading">We’re Canonical</h3>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <div class="col-medium-2 col-3">
-                        <hr class="p-rule--highlight is-accent">
-                        <h4 class="p-heading--2"><strong>950+</strong><br>Employees</h4>
-                    </div>
-                    <div class="col-medium-2 col-3">
-                        <hr class="p-rule--highlight">
-                        <h4 class="p-heading--2"><strong>89</strong><br>Countries</h4>
-                    </div>
-                    <div class="col-medium-2 col-3">
-                        <hr class="p-rule--highlight">
-                        <h4 class="p-heading--2"><strong>78</strong><br>Languages</h4>
-                    </div>
-                    <div class="col-9">
-                        <p>The future is already here, as open source. Canonical delivers it to the world. We play a critical role in broadening the benefits of open source to more people and more industries than ever before. This means bringing new work opportunities to people regardless of their location too.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="p-strip">
         <div class="row">
             <div class="col-6">

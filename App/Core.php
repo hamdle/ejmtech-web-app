@@ -58,7 +58,9 @@ class Core
     private function handleAuthentication(): void
     {
         $this->session = new Authentication\Session();
-        if (!($_SERVER["REQUEST_URI"] === "/" || $this->session->authenticateUserFromCookie()))
+        if (!($_SERVER["REQUEST_URI"] === "/" ||
+            $_SERVER["REQUEST_URI"] === "/login/" ||
+            $this->session->authenticateUserFromCookie()))
         {
             throw new \Exception(self::AUTHENTICATION_ERROR_MESSAGE);
         }

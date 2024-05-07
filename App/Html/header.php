@@ -29,9 +29,19 @@
                 </ul>
             <?php } else { ?>
                 <ul class="p-navigation__items">
-                    <li class="p-navigation__item ">
-                        <a class="p-navigation__link" href="/">
-                            <?php echo $_ENV["APP_NAME"]; ?>
+                    <li class="p-navigation__item <?php if ($this->onPage("/home")) { ?> is-selected <?php } ?>">
+                        <a class="p-navigation__link" href="/home">
+                            Services
+                        </a>
+                    </li>
+                    <li class="p-navigation__item <?php if ($this->onPage("/home")) { ?> is-selected <?php } ?>">
+                        <a class="p-navigation__link" href="/home">
+                            About
+                        </a>
+                    </li>
+                    <li class="p-navigation__item <?php if ($this->onPage("/home")) { ?> is-selected <?php } ?>">
+                        <a class="p-navigation__link" href="/home">
+                            Contact
                         </a>
                     </li>
                 </ul>
@@ -55,10 +65,15 @@
                 </ul>
             <?php } else { ?>
                 <ul class="p-navigation__items">
-                    <li class="p-navigation__item  <?php if ($this->onPage("/login")) { ?> is-selected <?php } ?>" id="link-1">
+                    <li class="p-navigation__item--dropdown-toggle <?php if ($this->onPage("/user")) { ?> is-selected <?php } ?>" id="link-1">
                         <a class="p-navigation__link" aria-controls="account-menu" aria-expanded="false" href="#">
-                            Login
+                            Account
                         </a>
+                        <ul class="p-navigation__dropdown--right" id="account-menu" aria-hidden="true">
+                            <li>
+                                <a href="/login" class="p-navigation__dropdown-item">Login</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             <?php } ?>
